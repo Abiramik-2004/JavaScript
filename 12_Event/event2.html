@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            .outer{
+            height:100vh;
+            background-color: rgb(209, 209, 129);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* IMPORTANT for absolute dropdown */
+        }
+
+        #color {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .inner{
+            height:250px;
+            width: 350px;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        label{
+            font-size: x-large;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+
+        }
+        input{
+            background-color: rgba(128, 128, 128, 0.171);
+            height:30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button{
+            background-color: blueviolet;
+            color:white;
+            font-size:large;
+            padding: 3px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            border-radius: 5px;
+            height: 35px;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <select id="color">
+        <option value="">Select Color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+        <div class="inner">
+            <form action="">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="pswd">Password</label>
+                <input type="password" id="pswd">
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="./event2.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+// how to create a function in javascript
+function add(){
+    console.log(3+6);
+    
+}
+add()
+add()
+add()
+
+// function with parameter
+function sub(a,b){
+    console.log(a-b);
+    
+}
+sub(40,10)
+sub(80,30)
+
+// function with return statement
+
+function multiply(a, b){
+    return a*b
+}
+let a=multiply(10, 20)
+console.log(a);
+console.log(multiply(20,2));
+
+// 2. Anonymous Function
+
+//? function(){
+
+//? }
+
+// 3. Function with expression
+// ? Swapping two variables
+let swap=function(a,b){
+    console.log("Befor swap:",a,b);
+    
+    a=a+b
+    b=a-b
+    a=a-b
+    console.log("After swap:",a,b);
+    
+}
+swap(10,20)
+//? count the digit of the numbers
+let count=function(a){
+    let i=1;
+    while(a>=10){
+        a=a/10
+        i++
+    }
+    console.log(i);
+    
+}
+count(10)
+let digitcount=function(a){
+    let count=0
+    while(a>0){
+        a=Math.floor(a/10)
+        count++
+    }
+    console.log(count);
+    
+}
+digitcount(10)
+//4. Arrow function
+let wish=(username)=>{
+    console.log("good afternoon");
+    console.log(username)
+    
+}
+wish("Abirami Kanthasamy")
+//? Reverse a number
+
+
+//!Arrow function with parameter
+ let reverse=(a)=>
+ {
+    let b=0;
+    while(a>0)
+    {
+        b=b*10+a%10
+        a=Math.floor(a/10)
+
+    }
+    console.log(b);
+    
+
+ }
+ reverse(123)
+//  !Nested Function
+let outer=()=>
+{
+    
+    let num1=40;
+    console.log(`I am outer function ${num1}`,num1);//String interpolation
+    
+    let inner=()=>
+    {
+        console.log("I  am inner function");
+        
+    }
+
+
+    inner()
+
+}
+outer()
+// !Lexical Scopping
+// In nested function inner function can access all the properties of the outer function but 
+// the outer function can not access the properties of inner function ,this is called lexial scopping
+let out=()=>
+{
+    let bike="xl";
+    let inn = ()=>
+    {
+        let phone ="none"
+        console.log("Bike",bike);
+        
+    }
+    // console.log(phone); throws an error 
+    
+    inn()
+}
+out()
+// Higher order function
+
+let work=()=>{
+    console.log("I am working now")
+}
+let person3=(a)=>{
+    a()
+}
+person3(work)
+person3(()=>{
+    console.log("I am also working")
+})
+//------------
+let addition=(a,b)=>{
+    console.log(a+b);
+    
+}
+let Subraction=(a,b)=>{
+    console.log(a-b)
+}
+let Arithmetic=(myFun,a,b)=>{
+    myFun(a,b)
+}
+Arithmetic(addition,10,20)
+Arithmetic(Subraction,30,5)
+
+// Prime number Checker
+let PrimeNumber=
